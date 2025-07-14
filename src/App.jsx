@@ -8,6 +8,8 @@ import Modal from './components/Modal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -36,6 +38,8 @@ export default function App() {
 
         <div className="p-6">
           <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/" element={<Home />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/job/:id" element={<JobDetail />} />

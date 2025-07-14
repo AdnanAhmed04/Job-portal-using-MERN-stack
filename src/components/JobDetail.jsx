@@ -27,6 +27,8 @@ const JobDetail = () => {
           <p><span className="font-semibold">📌 Positions:</span> {job.positions}</p>
           <p><span className="font-semibold">🕒 Type:</span> {job.type}</p>
           <p><span className="font-semibold">💰 Salary:</span> {job.salary}</p>
+          <p className='text-blue-700'><span className="font-semibold text-black ">💰 Salary:</span> {job.skills}</p>
+
         </div>
         <button
           onClick={() => setShowModal(true)}
