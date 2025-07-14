@@ -1,19 +1,29 @@
 import React from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 
-
-// react icons
-import { FaUserCircle } from 'react-icons/fa'; 
-
-
-export default function Navbar({ setPage, openProfile }) {
+const Navbar = ({ setPage, openProfile, user }) => {
   return (
     <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
       <h1 className="text-xl font-bold">KaamFinder</h1>
-      <div className="space-x-4">
-        <button onClick={() => setPage('home')} className="cursor-pointer">Home</button>
-        <button onClick={() => setPage('jobs')} className="cursor-pointer">Jobs</button>
-        <button onClick={openProfile} className="cursor-pointer text-2xl"><FaUserCircle /></button>
+      <div className="flex items-center gap-4">
+        <button onClick={() => setPage('home')}>Home</button>
+        <button onClick={() => setPage('jobs')}>Jobs</button>
+
+        <div className="flex items-center gap-2 cursor-pointer" onClick={openProfile}>
+          {user.image ? (
+            <img
+              src={user.image}
+              alt="profile"
+              className="w-9 h-9 rounded-full object-cover border-2 border-white"
+            />
+          ) : (
+            <FaUserCircle className="text-2xl" />
+          )}
+          <span className="hidden sm:inline"></span>
+        </div>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

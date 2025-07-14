@@ -77,7 +77,8 @@ const jobFields = [
 
 const Jobcard = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 "data-aos="zoom-in-up"
+        data-aos-delay="200">
       {jobFields.map((job, index) => (
         <div key={index} className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
           <h2 className="text-sm text-gray-600">{job.company}</h2>
