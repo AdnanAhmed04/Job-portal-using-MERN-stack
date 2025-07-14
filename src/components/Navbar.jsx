@@ -1,15 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 
-const Navbar = ({ setPage, openProfile, user }) => {
+const Navbar = ({ openProfile, user }) => {
   return (
-    <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">KaamFinder</h1>
-      <div className="flex items-center gap-4">
-        <button onClick={() => setPage('home')}>Home</button>
-        <button onClick={() => setPage('jobs')}>Jobs</button>
-
-        <div className="flex items-center gap-2 cursor-pointer" onClick={openProfile}>
+    <nav className="bg-white shadow p-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="text-xl font-bold">Job Portal</div>
+        <div className="flex gap-8">
+          <Link to="/" className="text-gray-600 hover:text-blue-600">
+            Home
+          </Link>
+          <Link to="/jobs" className="text-gray-600 hover:text-blue-600">
+            Jobs
+          </Link>
+          <div className="flex items-center gap-2 cursor-pointer" onClick={openProfile}>
           {user.image ? (
             <img
               src={user.image}
@@ -19,7 +24,8 @@ const Navbar = ({ setPage, openProfile, user }) => {
           ) : (
             <FaUserCircle className="text-2xl" />
           )}
-          <span className="hidden sm:inline"></span>
+        </div>
+
         </div>
       </div>
     </nav>

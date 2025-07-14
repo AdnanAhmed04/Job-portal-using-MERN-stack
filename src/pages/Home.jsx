@@ -1,6 +1,5 @@
 import React from 'react';
 import Jobcard from '../components/Jobcard';
-
 const Home = () => {
   return (
     <div className="mt-10 px-4 md:px-8 lg:px-16">
@@ -29,7 +28,7 @@ const Home = () => {
           Latest Top Jobs Opening
         </h2>
         <div data-aos="fade-up" data-aos-delay="500">
-          <Jobcard />
+          <Jobcard/>
         </div>
       </div>
     </div>
