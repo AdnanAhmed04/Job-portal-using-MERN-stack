@@ -6,7 +6,7 @@ const Navbar = ({ openProfile, user }) => {
   return (
     <nav className="bg-white shadow p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-xl font-bold">Job Portal</div>
+        <div className="text-xl font-bold">Kaam Finder</div>
         <div className="flex gap-8">
           <Link to="/" className="text-gray-600 hover:text-blue-600">
             Home

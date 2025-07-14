@@ -55,7 +55,7 @@ const Jobcard = () => {
     
 ];
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="zoom-in-up">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 " data-aos="zoom-in-up">
             {jobFields.map((job) => (
                 <Link to={`/job/${job.id}`} key={job.id}>
                     <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
