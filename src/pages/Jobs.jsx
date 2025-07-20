@@ -1,5 +1,7 @@
+// Job.jsx
 import React from 'react';
 import Job from '../components/Job';
+
 
 const Jobs = () => {
   return (
@@ -10,4 +12,4 @@ const Jobs = () => {
   );
 };
 
-export default Jobs;
+export default Jobs; // ✅ This line is necessary

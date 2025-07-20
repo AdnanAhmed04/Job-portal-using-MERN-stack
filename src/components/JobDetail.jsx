@@ -1,12 +1,13 @@
-// JobDetail.jsx
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { jobFields } from './Job';
+import { useParams, useLocation } from 'react-router-dom';
+import { jobFields } from './jobData'; // fallback data
 import ApplyModal from './ApplyModal';
 
 const JobDetail = () => {
   const { id } = useParams();
-  const job = jobFields.find((job) => job.id === parseInt(id));
+  const location = useLocation();
+  const jobFromState = location.state?.job;
+  const job = jobFromState || jobFields.find((job) => job.id === parseInt(id));
   const [showModal, setShowModal] = useState(false);
 
   if (!job) {
@@ -27,8 +28,7 @@ const JobDetail = () => {
           <p><span className="font-semibold">📌 Positions:</span> {job.positions}</p>
           <p><span className="font-semibold">🕒 Type:</span> {job.type}</p>
           <p><span className="font-semibold">💰 Salary:</span> {job.salary}</p>
-          <p className='text-blue-700'><span className="font-semibold text-black ">💰 Salary:</span> {job.skills}</p>
-
+          <p className='text-blue-700'><span className="font-semibold text-black ">🧠 Skills:</span> {job.skills}</p>
         </div>
         <button
           onClick={() => setShowModal(true)}

@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Jobcreation from './pages/Jobcreation';
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -43,6 +44,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/job/:id" element={<JobDetail />} />
+            <Route path="/Jobcreation" element={<Jobcreation />} />
+
           </Routes>
         </div>
 
