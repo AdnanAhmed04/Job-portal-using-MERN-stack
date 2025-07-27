@@ -17,6 +17,9 @@ const Navbar = ({ openProfile, user }) => {
           <Link to="/Jobcreation" className="text-gray-600 hover:text-blue-600">
             Job creation
           </Link>
+          <Link to="/Appiledjob" className="text-gray-600 hover:text-blue-600">
+            Appiled jobs
+          </Link>
           <Link to="/Login" className="text-gray-600 hover:text-blue-600">
             Login
           </Link>

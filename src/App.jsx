@@ -11,13 +11,14 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Jobcreation from './pages/Jobcreation';
+import Appiledjob from './pages/Appiledjob';
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
   const [user, setUser] = useState({
-    name: 'John Doe',
-    email: 'john@example.com',
-    role: 'Job Seeker',
+    name: '',
+    email: '',
+    role: '',
     phone: '',
     image: '',
   });
@@ -44,6 +45,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/job/:id" element={<JobDetail />} />
+            <Route path="/Appiledjob" element={<Appiledjob />} />
+
             <Route path="/Jobcreation" element={<Jobcreation />} />
 
           </Routes>
