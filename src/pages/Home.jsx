@@ -20,7 +20,7 @@ const Home = () => {
 
       {/* Jobs Heading */}
       <div
-        className="backdrop-blur-sm bg-white/30 p-4 rounded-xl shadow"
+        className="backdrop-blur-sm mb-20 bg-gray-50 p-4 rounded-xl shadow"
         data-aos="zoom-in-up"
         data-aos-delay="200"
       >
